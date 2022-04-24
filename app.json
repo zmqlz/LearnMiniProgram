@@ -1,45 +1,11 @@
 {
   "pages": [
-    "pages/home/home",
-    "pages/profile/profile",
-    "pages/shopcart/shopcart",
-    "pages/category/category"
+    "pages/scroll-view/scroll-view",
+    "pages/input/input",
+    "pages/image1/image",
+    "pages/view1/view",
+    "pages/button/button",
+    "pages/text/text"
   ],
-  "sitemapLocation": "sitemap.json",
-  "window": {
-    "navigationBarBackgroundColor": "#ff5777",
-    "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "我的小程序",
-
-    "backgroundColor": "#ff1493",
-    "enablePullDownRefresh": false
-  },
-  "tabBar": { 
-    "selectedColor": "#ff5777",
-    "list": [{
-      "pagePath": "pages/home/home",
-      "text": "首页",
-      "iconPath": "assets/tabbar/home.png",
-      "selectedIconPath": "assets/tabbar/home_active.png"
-    },
-    {
-      "pagePath": "pages/category/category",
-      "text": "分类" ,
-      "iconPath": "assets/tabbar/category.png",
-      "selectedIconPath": "assets/tabbar/category_active.png"
-    },
-    {
-      "pagePath": "pages/shopcart/shopcart",
-      "text": "购物车" ,
-      "iconPath": "assets/tabbar/cart.png",
-      "selectedIconPath": "assets/tabbar/cart_active.png"
-    },
-    {
-      "pagePath": "pages/profile/profile",
-      "text": "个人" ,
-      "iconPath": "assets/tabbar/profile.png",
-      "selectedIconPath": "assets/tabbar/profile_active.png"
-    }
-  ]
-  }
+  "sitemapLocation": "sitemap.json"
 }
