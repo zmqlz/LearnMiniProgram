@@ -1,0 +1,5 @@
+/* pages/profile/profile.wxss */
+.profile {
+ color: deeppink;
+ font-size: 30px;
+}

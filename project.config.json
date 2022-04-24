@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -42,9 +42,9 @@
     "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.24.0",
+  "libVersion": "2.23.4",
   "appid": "wxff49cc8560cccf5b",
-  "projectname": "learnMiniProgram",
+  "projectname": "MiniProgram",
   "debugOptions": {
     "hidedInDevtools": []
   },
