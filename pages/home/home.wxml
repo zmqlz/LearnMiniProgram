@@ -1,0 +1,4 @@
+
+<!-- 1.hidden:所以组件默认显示 默认值false-->
+<view hidden>哈哈哈</view>
+<button hidden="{{flase}}">按钮</button>

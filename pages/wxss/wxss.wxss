@@ -1,0 +1,14 @@
+/* pages/wxss/wxss.wxss */
+/* 
+  支持的选择器
+  类选择器( class )
+  id选择器
+  元素选择器
+  兵器选择器
+  ::after 在元素后面插入内容
+  ::before 在元素前面插入内容
+*/
+
+/* 3.样式导入 @import "路径" */
+@import "./styele/box.wxss";
+@import "./styele/content.wxss"
