@@ -1,0 +1,13 @@
+/* pages/wxml/wxml.wxss */
+.box {
+  font-size: 64rpx;
+}
+
+.active {
+  color: deeppink;
+}
+
+#judge {
+  font-size: 30px;
+  color: deeppink
+}

@@ -1,0 +1,66 @@
+<!--pages/wxml/wxml.wxml-->
+<!-- 1.Mustache语法 -->
+<view>{{message}}</view>
+<view>{{str1}} {{str2}}</view>
+<view>{{str1 + " " + str2}}</view>
+<view>{{age>20?"靓仔":"叼毛"}}</view>
+<view>{{nowDate}}</view>
+<button bindtap="handleSwitchColor">切换颜色</button>
+<view class="box {{isActive? 'active':''}}">我变</view>
+
+<view id="judge">------- 条件判断 ------</view>
+<!-- wx:if 的使用 -->
+<button bindtap="handleSwitchShow">按钮</button>
+<view wx:if="{{isShow}}">哈哈哈</view>
+
+<!-- wx:elif和wx:else -->
+<button bindtap="handleAddScore">分数加6</button>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else>不及格</view>
+
+<!-- hiddwn属性 -->
+<view hidden="{{isShow}}">我是hidden属性控制的内容</view>
+
+<!-- wx:if与hidden在隐藏组件时有什么区别 -->
+<!-- 
+  hidden:将一个组件隐藏起来时,该组件是存在的(display：none)
+  wx:if:将一个组件隐藏起来时,该组件没有创建
+  如果显示和隐藏切换的频率非常高，选择使用hidden
+  如果显示和隐藏切换的频率非常低，选择使用wx:if
+ -->
+<view wx:if="{{false}}">我是wx:if属性控制的内容</view>
+<view hidden="{{true}}">我是hidden属性控制的内容(display：none）</view>
+
+
+<view id="judge">--- 列表渲染for循环 ---</view>
+<!-- 1.for循环 -->
+<view wx:for="{{['猪猪侠','小呆呆','超人强']}}">{{item}} {{index}}</view>
+<view wx:for="{{'炎龙侠'}}">{{item}}</view>
+<view wx:for="{{2}}">呵呵</view>
+
+<!-- 2.给item、idnex起名字 -->
+<view wx:for="{{movies}}" wx:for-item="m" wx:for-index="i" wx:key="*this">
+  {{m}}:{{i}}
+</view>
+
+<!-- 注意:取名中间不能使用 "-" 来分割 -->
+<block wx:for="{{nums}}" wx:for-item="innerItem" wx:key="*this">
+  <block wx:for="{{innerItem}}" wx:key="*this">
+    <view>{{item}}</view>
+  </block>
+</block>
+
+<!-- 3.block标签:不是一个组件,仅仅是一个包装元素(即不会创建 block 标签)-->
+<block>
+  <view>我被block包裹了</view>
+</block>
+
+<!-- 4.key的作用:高效的更新虚拟DOM(提高效率)-->
+<!-- wx:key 的值以两种形式提供
+1.字符串，代表在 for 循环的 array 中 item 的某个 property，该 property 的值需要是列表中唯一的字符串或数字，且不能动态改变。
+2.保留关键字 *this 代表在 for 循环中的 item 本身，这种表示需要 item 本身是一个唯一的字符串或者数字。 -->
+<view>
+  <view wx:for="{{letters}}" wx:key="*this">{{item}}</view>
+</view>
