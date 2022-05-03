@@ -1,5 +1,22 @@
 {
   "pages": [
-    "pages/index/index"
-  ]
+    "pages/index/index",
+    "pages/useTemplate/useTemplate",
+    "pages/user/user",
+    "pages/wxs/wxs",
+    "pages/click/click"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "index"
+      },
+      {
+        "pagePath": "pages/useTemplate/useTemplate",
+        "text": "useTemplate"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

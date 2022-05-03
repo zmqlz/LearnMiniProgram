@@ -1,0 +1,62 @@
+<!-- 1.点击事件的回顾 -->
+<button size="mini" bindtap="handleBtnClick">按钮</button>
+<button size="mini" bind:tap="handleBtnClick">按钮</button>
+<button size="mini" catch:tap="handleBtnClick">按钮</button>
+
+<!-- 2.常见的一些事件 -->
+<!-- 
+  touchstart	手指触摸动作开始
+  touchmove	手指触摸后移动
+  touchend	手指触摸动作结束
+  longpress	手指触摸后，超过350ms再离开，如果指定了事件回调函数并触发了这个事件，tap事件将不被触发
+ -->
+<view class=".box" bind:touchstart="handleTouchStart" bind:touchmove="handleTouchMove" bind:touchend="handleTouchend" bind:tap="handleTap" bind:longpress="handleLongpress">
+</view>
+
+<!-- 3.事件对象 -->
+<button id="btn" size="mini" 
+    bindtap="handleEventClick"
+    bindtouchend="handleEventEnd"
+>事件对象</button>
+<!-- touches 与 changedTouches 的区别
+    touches:用来记录当前有几根手指在小程序中触摸以及对应的触摸点的信息
+    changedTouches:触发事件时改变的触摸点的集合
+-->
+
+<view id="outer" bindtap="handleOuter">
+外层view
+  <view id="inner" bindtap="handleInner">内层的view</view>
+</view>
+<!-- currentTarget 与 target 的区别
+  currentTarget:触发事件的元素
+  target:产生事件的元素
+  例:点击 内层view, 外层view 的 currentTarget 的id为"outer",
+      而 target 的id为"inner"
+ -->
+
+ <!-- 4.事件的传递参数 -->
+ <view class="container">
+  <block wx:for="{{name}}" wx:key="index">
+    <view class="item" 
+      bindtap="handleItemClick"
+      data-index="{{index}}"
+      data-item="{{item}}"
+    >{{item}}</view>
+  </block>
+ </view>
+
+ <!-- 5.事件冒泡 与 事件捕获 -->
+ <!-- capture-bind 发生事件捕获 -->
+ <!-- 
+   bind: 事件一层层传递
+   catch: 组织事件的传递
+  -->
+ <view class="v1" 
+ capture-bind:tap="handleCapturev1" bindtap="handleTapv1">
+   <view class="v2"
+   capture-bind:tap="handleCapturev2" catchtap="handleTapv2">
+     <view class="v3"
+     capture-bind:tap="handleCapturev3" bindtap="handleTapv3">
+     </view>
+   </view>
+ </view>

@@ -1,0 +1,45 @@
+/* pages/click/click.wxss */
+.box {
+  width: 300rpx;
+  height: 300rpx;
+  background-color: deeppink;
+}
+
+#outer {
+  width: 400rpx;
+  height: 400rpx;
+  background-color: deepskyblue;
+}
+
+#inner {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: red;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+}
+
+.item {
+  flex: 1;
+}
+
+.v1 {
+  width: 600rpx;
+  height: 600rpx;
+  background-color: deeppink;
+}
+
+.v2 {
+  width: 400rpx;
+  height: 400rpx;
+  background-color: deepskyblue;
+}
+
+.v3 {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: red;
+}

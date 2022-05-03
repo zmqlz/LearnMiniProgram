@@ -1,0 +1,31 @@
+<!-- wxs的使用 -->
+
+<!-- 2.1 直接在 wxml 定义 -->
+<!-- 1.wxs的定义方式 不能使用 ES6 语法-->
+<!-- mouule 必须写 -->
+<!-- <wxs module="info">
+  // 定义 JS 代码
+  var name = "罗颖";
+  var age = 19;
+  var sum = function (num1, num2) {
+    return num1 + num2
+  };
+  // 必须导出
+  module.exports = {
+    name : name,
+    age : age,
+    sum:sum
+  }
+</wxs> -->
+
+<!-- 2.2 定义在单独的 wxs 文件中,在使用 <wxs /> 标签进行导入 -->
+<!-- 注意:不能使用绝对路径,必须使用相对路径 -->
+<wxs src="../../wxs/info.wxs" module="info"/>
+
+<!-- 2.使用 wxs 中定义的 属性 或 方法 -->
+<view>{{info.name}} , {{info.age}}</view>
+<view>{{info.sum(20,32)}}</view>
+
+<!-- 3.wxs的应用 -->
+<wxs src="../../wxs/format.wxs" module="format" />
+<view>{{format.priceFormat(price,3)}}</view>

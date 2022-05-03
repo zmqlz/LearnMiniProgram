@@ -1,0 +1,12 @@
+// 定义 JS 代码
+var name = "罗颖";
+var age = 19;
+var sum = function (num1, num2) {
+  return num1 + num2
+};
+// 必须导出
+module.exports = {
+  name: name,
+  age: age,
+  sum: sum
+}

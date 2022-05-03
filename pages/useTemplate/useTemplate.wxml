@@ -1,0 +1,14 @@
+<!--pages/useTemplate/useTemplate.wxml-->
+
+<!-- 之前的小程序不支持自定义组件,为了进行的代码的复用:template -->
+<!-- 模板中包裹的内容,在没有被使用之前,是不会进行任何的渲染的 -->
+<!-- 必须写 name 属性 -->
+<template name="contentView">
+  <button size="mini">{{btnText}}</button>
+  <view>{{vwText}}</view>
+</template>
+
+<!-- 使用模块 通过 is 使用  -->
+<!-- 若模板中使用Mustache语法 
+     则通过 data="{{key1:value1,key2:value2...}}" 赋值 -->
+<template is="contentView" data="{{btnText:'按钮',vwText:'罗颖'}}" />
