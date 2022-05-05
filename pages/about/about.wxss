@@ -1,0 +1,11 @@
+.deeppink {
+  color: deeppink;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}

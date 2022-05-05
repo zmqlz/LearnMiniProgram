@@ -1,0 +1,8 @@
+.title {
+  color: black;
+  font-size: 35px;
+}
+
+.box {
+ color: blue;
+}

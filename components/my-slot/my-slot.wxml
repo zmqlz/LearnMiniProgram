@@ -1,0 +1,6 @@
+<!-- 插槽的基本使用 -->
+<view class="wrapper">
+  <view class="v1">单个插槽的基本使用</view>
+  <view>{{message}}</view>
+  <slot></slot>
+</view>

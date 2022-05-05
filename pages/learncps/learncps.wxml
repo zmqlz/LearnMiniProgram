@@ -1,0 +1,4 @@
+<!-- 练习 tab-control -->
+<tab-control bind:itemClick="handleTabClick" />
+
+<tab-control  titles="{{['陈梅','罗颖','邓媛']}}" />

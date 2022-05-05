@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-slot":"/components/my-slot/my-slot",
+    "my-slots":"/components/my-slots/my-slots"
+  }
+}

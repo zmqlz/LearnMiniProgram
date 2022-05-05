@@ -1,0 +1,11 @@
+/* pages/components/my-cpn/my-cpn.wxss */
+.title {
+  font-size: 30px;
+  font-weight: 800;
+  color: deepskyblue;
+}
+
+.content {
+  font-size: 18px;
+  color: deeppink;
+}

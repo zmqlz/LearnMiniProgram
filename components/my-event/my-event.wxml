@@ -1,0 +1,1 @@
+<button size="mini" bind:tap="handleAddEvent"> +1 </button>

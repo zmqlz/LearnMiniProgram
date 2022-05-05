@@ -1,0 +1,2 @@
+<!-- 使用 properties -->
+<view class="title titleclass">{{title}}</view>

@@ -1,0 +1,19 @@
+<!-- 全局组件 -->
+<cpn2 />
+
+<!-- 1.给自定义组件传递数据/样式 -->
+<button bind:tap="handleChangeShow">{{text}}</button>
+<block wx:if="{{isShow}}">
+  <my-props titleclass="deeppink" /> <!-- 默认值 -->
+  <my-props title="炎龙侠" titleclass="red" /> <!-- 使用自定义值 -->
+  <my-props title="帝皇侠" titleclass="green" /> <!-- 使用自定义值 -->
+</block>
+
+
+<!-- 2.组件向外传递事件---自定义事件 -->
+<view>当前计数:{{count}}</view>
+<my-event bind:addEvent="addEvent" />
+
+<!-- 3.修改组件内的数据 -->
+<my-count id="count-id" />
+<button bind:tap="handleAddCount">修改组件内的数据</button>

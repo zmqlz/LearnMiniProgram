@@ -1,5 +1,12 @@
 {
   "pages": [
-    "pages/index/index"
-  ]
+    "pages/index/index",
+    "pages/about/about",
+    "pages/learncps/learncps",
+    "pages/slot/slot"
+  ],
+  "usingComponents": {
+    "cpn2": "./components/cpn2/cpn2"
+  },
+  "sitemapLocation": "sitemap.json"
 }

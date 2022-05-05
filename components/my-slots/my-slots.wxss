@@ -1,0 +1,4 @@
+.v1 {
+  font-size: 60rpx;
+  color: deeppink;
+}

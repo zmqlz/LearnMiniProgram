@@ -1,0 +1,6 @@
+<view class="v1">多个插槽的使用</view>
+<view><slot name="slot1"></slot></view>
+<view><slot name="slot2"></slot></view>
+<view><slot name="slot3"></slot></view>
+
+

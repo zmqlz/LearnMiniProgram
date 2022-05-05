@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-props":"/components/my-props/my-props",
+    "my-event":"/components/my-event/my-event",
+    "my-count":"/components/my-count/my-count"
+  }
+}
