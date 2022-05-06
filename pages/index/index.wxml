@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="container">
-  Weixin
+  网络请求
 </view>
