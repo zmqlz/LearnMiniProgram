@@ -1,4 +1,18 @@
-<!--index.wxml-->
-<view class="container">
-  Weixin
-</view>
+<button>按钮</button>
+<!-- 1.showToast 弹窗-->
+<button bind:tap="handleShowToast">showToast</button>
+
+<!-- 2.showModal 弹窗-->
+<button bind:tap="handleShowModal">showModal</button>
+
+<!-- 3.showLoading 弹窗-->
+<button bind:tap="handleShowLoading">showLoading</button>
+
+
+<!-- 4.showActionSheet 弹窗-->
+<button bind:tap="handleShowActionSheet">showActionSheet</button>
+
+<!-- 5.分享按钮 -->
+<!-- open-type: share 实现分享功能 -->
+<button open-type="share">分享</button>
+
