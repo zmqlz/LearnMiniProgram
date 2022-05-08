@@ -1,4 +1,29 @@
-<!--index.wxml-->
-<view class="container">
-  Weixin
-</view>
+<!-- 1.navigator 页面跳转 -->
+<navigator url="/pages/home/home" class="nav">跳转到home页面</navigator>
+
+<!-- 2.navigato 属性
+  1.redirect:关闭当前页面,跳转到应用内某个页面,并且不能返回(但是不允许跳转到tabbar页面)
+  2.switchTab:跳转到 tabbar 页面,并关闭其他非 tabbar 页面(需要在 tabbar 中定义)
+  3.reLaunch:关闭所有页面,打开应用中某个页面(直接展示某个页面,并且可以跳转到 tabbar 页面)
+  4.navigateBack:返回上一级(delta="n" 返回 第 n 级页面)
+ -->
+<navigator url="/pages/home/home" class="nav" open-type="redirect">
+  跳转到home页面(redirect)
+</navigator>
+
+<navigator url="/pages/about/about" class="nav" open-type="switchTab">
+  跳转到about页面(switchTab)
+</navigator>
+
+<navigator url="/pages/home/home" class="nav" open-type="reLaunch">
+  跳转到home页面(reLaunch)
+</navigator>
+
+<!-- 3.跳转过程中数据的传递 -->
+<navigator url="/pages/home/home?name=罗颖&age=19" class="nav">
+  跳转到home页面
+</navigator>
+<view>{{title}}</view>
+
+<!-- 4.通过代码进行跳转 (open-type 中的每一种属性都对应 一个 wx 的方法)-->
+<button bind:tap="handlePushDetail">跳转到home页面</button>

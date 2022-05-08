@@ -1,0 +1,4 @@
+.home {
+  color: deepskyblue;
+  font-size: 25px;
+}

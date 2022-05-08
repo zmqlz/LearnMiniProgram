@@ -1,1 +1,6 @@
-/**index.wxss**/
+.nav {
+  width: 700rpx;
+  height: 300rpx;
+  font-size: 30px;
+  color: deeppink;
+}

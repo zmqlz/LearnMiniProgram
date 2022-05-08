@@ -1,0 +1,12 @@
+<view class="home">我会home页面</view>
+
+<navigator url="/pages/comment/comment">跳转到comment页面</navigator>
+
+<!-- 返回 上一级(必须要有记录) -->
+<navigator open-type="navigateBack">返回上一级</navigator>
+
+<!-- indec 传递过来的数据 -->
+<view wx:if="{{isShow}}">{{name}}:{{age}}</view>
+
+<!-- 通过代码进行返回上一级操作 -->
+<button bind:tap="handleBack">返回上一级</button>
